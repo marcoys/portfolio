@@ -1,38 +1,25 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'),
+    url('https://cdn.jsdelivr.net/gh/jetbrains/jetbrainsmono@1.0.2/web/woff2/JetBrainsMono-Regular.woff2')
+      format('woff2'), url('https://cdn.jsdelivr.net/gh/jetbrains/jetbrainsmono@1.0.2/web/woff/JetBrainsMono-Regular.woff')
+      format('woff'),
+    url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-Regular.ttf')
+      format('truetype'), url('https://cdn.jsdelivr.net/gh/jetbrains/jetbrainsmono@1.0.2/web/eot/JetBrainsMono-Regular.eot')
+      format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+body {background: #111111; position: relative;}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.left-content {position: fixed;  height: 100vh; text-align: center;  background-image: url('/public/images/stars.jpg'); background-size: cover; color: #fff; display: flex; padding: 0 3%;}
+.left-cont-box {display: flex; flex-direction: column; align-items: center; justify-content: center;}
+.left-cont-box > img {width: 130px;}
+.left-cont-box h1 {font-size: 2rem; padding: 30px 0 4px 0; font-weight: 600;}
+.left-cont-box .p { word-break: keep-all; line-height: 25px;}
+.left-cont-box > div > input {margin-top: 100px; text-decoration: underline; background-color: transparent; outline: none; border: none; color: #fff; font-size: 1rem; text-align: center; display: inline-block; width: 175px;}
+.left-cont-box > div .btn-copy {display: inline-block; cursor: pointer; position: relative; top: 4px;}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.right-content {background: #4e4e4e; position: fixed; width: 20%; right: 0; top: 0; height: 100vh;}

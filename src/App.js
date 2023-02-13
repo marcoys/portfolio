@@ -1,10 +1,16 @@
 import logo from './logo.svg';
+import './reset.css';
 import './App.css';
+import LeftContent from './components/LeftContent';
+import MainContent from './components/MainContent';
+import RightContent from './components/RightContent'
 
 function App() {
   return (
     <div className="App">
-      포트폴리오임
+      <LeftContent />
+      <MainContent />
+      <RightContent />
     </div>
   );
 }
