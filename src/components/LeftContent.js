@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { AiFillCopy } from "react-icons/ai";
 import $ from 'jquery';
 
@@ -23,8 +23,8 @@ function LeftContent() {
   return (
     <div className='left-content'>
       <div className='left-cont-box'>
-        <img src={`${process.env.PUBLIC_URL}/images/mm.png`} alt="" />
-        <h1>Lee YouSang <br />&#183;</h1>
+        <img src={`${process.env.PUBLIC_URL}/images/mm2.png`} alt="" />
+        <h1 className='txt-brt'>Lee YouSang <br />&#183;</h1>
         <p>Web-Publisher, <br />Front-End Developer</p>
 
         <div>
