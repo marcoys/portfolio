@@ -1,0 +1,30 @@
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'),
+    url('https://cdn.jsdelivr.net/gh/jetbrains/jetbrainsmono@1.0.2/web/woff2/JetBrainsMono-Regular.woff2')
+      format('woff2'), url('https://cdn.jsdelivr.net/gh/jetbrains/jetbrainsmono@1.0.2/web/woff/JetBrainsMono-Regular.woff')
+      format('woff'),
+    url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-Regular.ttf')
+      format('truetype'), url('https://cdn.jsdelivr.net/gh/jetbrains/jetbrainsmono@1.0.2/web/eot/JetBrainsMono-Regular.eot')
+      format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$themeColor : #35d47a;
+$themeColorDark : #0a1309;
+
+/* body {background: #111111; position: relative;} */
+body {background: $themeColorDark; position: relative; color: $themeColor;}
+.App {display: flex;}
+
+.txt-brt {filter: drop-shadow(0 0 2px rgba(36, 255, 102, 0.4))
+  drop-shadow(0 0 5px rgba(36, 255, 102, 0.4))
+  drop-shadow(0 0 15px rgba(36, 255, 102, 0.4));}
+
+
+
+
+
+

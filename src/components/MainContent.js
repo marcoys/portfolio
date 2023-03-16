@@ -1,9 +1,9 @@
-import React from 'react'
+import '../scss/mainContent.scss'
 
-function MainContent({ leftWidth }) {
+function MainContent({ leftWidth, naviWidth }) {
 
   return (
-    <div className='main-content' style={{ marginLeft: (leftWidth)}}>
+    <div className='main-content' style={{ marginLeft: (leftWidth) + (naviWidth)}}>
       <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend, turpis non gravida commodo, mi magna iaculis justo, vel eleifend sapien lacus non ligula. Ut ullamcorper scelerisque erat ac scelerisque. Sed nisi nisl, ultrices id massa ut, molestie feugiat nisl. Nam venenatis enim vitae tortor congue, at convallis enim posuere. Quisque interdum vel sapien eget tincidunt. Nunc tempor, sapien ut molestie pretium, metus urna eleifend justo, nec viverra dui nisl id dolor. Nulla sed ex sapien. Etiam non nunc sed nunc consectetur tincidunt quis sed odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam finibus rhoncus nibh id aliquam. Cras mi turpis, bibendum sit amet elit sit amet, eleifend mollis leo. Donec pretium ex non bibendum lobortis. Curabitur in risus quis quam porttitor sagittis eget vitae nisi. Nam in felis mollis, rutrum leo sed, hendrerit orci.
 
