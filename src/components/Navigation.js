@@ -9,7 +9,7 @@ function Navigation({ leftWidth }) {
   return (
     <div className='navigation' style={{ marginLeft: (leftWidth)}}>
       <ul>
-        <li className={ onoff === 1 ? 'nav on' : 'nav'} onClick={() => {navigate('/'); setOnoff(1)}}>PROFILE</li>
+        <li className={ onoff === 1 ? 'nav on' : 'nav'} onClick={() => {navigate('/portfolio'); setOnoff(1)}}>PROFILE</li>
         <li className={ onoff === 2 ? 'nav on' : 'nav'} onClick={() => {navigate('/skill'); setOnoff(2)}}>SKILL</li>
         <li className={ onoff === 3 ? 'nav on' : 'nav'} onClick={() => {navigate('/projects'); setOnoff(3)}}>PROJECTS</li>
       </ul>

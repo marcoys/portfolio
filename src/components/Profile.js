@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Outlet } from 'react-router-dom';
 import '../scss/profile.scss'
 
 function Profile({ leftWidth, naviWidth }) {
@@ -16,6 +17,7 @@ function Profile({ leftWidth, naviWidth }) {
 
   return (
     <div className={'profile start ' + fade}  style={{ marginLeft: (leftWidth) + (naviWidth)}}>
+      <Outlet></Outlet>
       <div className='container'>
         <section>
           <h1>배움을 갈구하는 개발자, <strong className='txt-wht'>이유상</strong> 입니다. </h1>
