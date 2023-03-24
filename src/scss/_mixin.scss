@@ -1,0 +1,41 @@
+@mixin mainContent {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  @content;
+}
+@mixin container {
+  width: 90%;
+  padding: 30px;
+  border: 1px solid app.$themeColor;
+  box-sizing: border-box;
+  animation-name: noise; animation-delay: 0s; animation-duration: 0.6s; animation-iteration-count: 1;  animation-timing-function: ease-out;
+  box-shadow: 0 0 10px rgba(36, 255, 102, 0.5);
+  @content;
+}
+
+@mixin title {
+  font-size: 1.5rem; margin-bottom: 10px; border-bottom: 1px solid app.$themeColor;
+}
+
+@keyframes noise {
+  0% {
+    transform: matrix3d(1, 0, 6, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, -1000, 0, 1) scaleY(0.1);
+  }
+  25% {
+    transform: matrix3d(1, 0, 6, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1000, 0, 1) scaleY(0.2);
+  }
+  50% {
+    transform: matrix3d(1, 0, 6, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, -1000, 0, 1) scaleY(0.2);
+  }
+  75% {
+    transform: matrix3d(1, 0, 6, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1000, 0, 1) scaleY(0.4);
+  }
+  100% {
+    transform: matrix3d(1, 0, 6, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1) scaleY(1);
+  }
+}

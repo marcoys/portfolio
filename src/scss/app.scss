@@ -1,3 +1,4 @@
+@use '_app';
 
 @font-face {
   font-family: 'JetBrains Mono';
@@ -12,17 +13,33 @@
   font-style: normal;
 }
 
-$themeColor : #35d47a;
-$themeColorDark : #0a1309;
+@font-face {
+  font-family: 'NeoDunggeunmoPro-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* body {background: #111111; position: relative;} */
-body {background: $themeColorDark; position: relative; color: $themeColor;}
-.App {display: flex;}
+body {position: relative; color: app.$themeColor; background: linear-gradient(#061a0e 10%, app.$themeColorDark 10%);
+  background-size: 100% 10px; font-family:  'NeoDunggeunmoPro-Regular'; }
+.App {display: flex; position: relative;}
+.wave-wrap {position: absolute; width: 100vw; height: 100%;  overflow-y: hidden; z-index: 0;}
+.wave {position: absolute; top: -50%; width: 100%; height: 200px; background-image: linear-gradient(transparent, #0a2616); animation-name: waveFrame; animation-delay: 10s; animation-duration: 20s; animation-iteration-count: infinite; animation-direction: forward; animation-timing-function: linear; }
 
-.txt-brt {filter: drop-shadow(0 0 2px rgba(36, 255, 102, 0.4))
-  drop-shadow(0 0 5px rgba(36, 255, 102, 0.4))
-  drop-shadow(0 0 15px rgba(36, 255, 102, 0.4));}
+.txt-brt {filter: drop-shadow(0 0 2px rgba(36, 255, 102, 0.4)) drop-shadow(0 0 5px rgba(36, 255, 102, 0.4)) drop-shadow(0 0 15px rgba(36, 255, 102, 0.4));}
 
+.txt-wht {color: #fff;}
+.txt-org {color: #ffb475}
+
+@keyframes waveFrame {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 300%;
+  }
+}
 
 
 

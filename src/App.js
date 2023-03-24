@@ -2,13 +2,25 @@ import logo from './logo.svg';
 import './scss/reset.scss';
 import './scss/app.scss';
 import LeftContent from './components/LeftContent';
-import MainContent from './components/MainContent';
-import Navigation from './components/Navigation'
+import Profile from './components/Profile';
+import Navigation from './components/Navigation';
+import Skill from './components/Skill.js';
+import Projects from './components/Projects.js';
 import { useEffect, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   const [ leftWidth, setLeftWidth ] = useState('0');
   const [ naviWidth, setNaviWidth ] = useState('0');
+  const [ fade, setFade ] = useState('');
+
+  useEffect(() => {
+    setFade('end');
+    return () => {
+      setFade('');
+    }
+  }, [])
+  
   
   window.onload = function() {
     setLeftWidth(document.querySelector('.left-content').clientWidth);
@@ -26,10 +38,17 @@ function App() {
   }, [leftWidth, naviWidth])
 
   return (
-    <div className="App">
+    <div className={'App start ' + fade}>
+      <div className='wave-wrap'><div className='wave'></div></div>
       <LeftContent />
       <Navigation leftWidth={leftWidth} />
-      <MainContent leftWidth={leftWidth} naviWidth={naviWidth} />
+      
+      <Routes>
+        <Route path="/" element={<Profile leftWidth={leftWidth} naviWidth={naviWidth} />} />
+        <Route path="/skill" element={<Skill leftWidth={leftWidth} naviWidth={naviWidth} />} /> 
+        <Route path="/projects" element={<Projects leftWidth={leftWidth} naviWidth={naviWidth} />} /> 
+        <Route /> 
+      </Routes>
     </div>
   );
 }

@@ -1,0 +1,18 @@
+@use '_app';
+@import '_mixin';
+
+.skill {
+  @include mainContent;
+
+  .container {
+    @include container
+  }
+
+  section {
+    margin-bottom: 50px;
+    h1 {@include title}
+    strong {font-weight: 600;}
+    p {font-size: 1rem; line-height: 22px;}
+
+  }
+}

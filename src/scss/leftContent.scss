@@ -1,4 +1,4 @@
-@use 'app';
+@use '_app';
 
 .left-content {
   z-index: 1;
@@ -16,7 +16,7 @@
     align-items: center; 
     justify-content: center;
     h1 {
-      font-size: 1.6rem; font-weight: 600;
+      font-size: 1.6rem; font-weight: 600; letter-spacing: 1px;
     }
     img {
       width: 130px; 
@@ -28,13 +28,13 @@
       line-height: 25px;
     }
     input {
+      font-family:  'NeoDunggeunmoPro-Regular';
       margin-top: 100px; 
-      text-decoration: underline; 
       background-color: transparent; 
       outline: none; 
       border: none; 
       color: app.$themeColor; 
-      font-size: 1rem; 
+      font-size: 1.2rem; 
       text-align: center; 
       display: inline-block; 
       width: 175px;
@@ -55,10 +55,10 @@
     left: 0;
     width: 80px;
     padding: 10px;
-    background-color: #fff;
+    background-color: app.$themeColorDark;
     transform: translate(-50%, -115%);
     z-index: 2;
-    box-shadow: 0 0 10px rgba(36, 255, 102, 0.5);
+    border: 2px solid app.$themeColor;
     transition: all 0.3s;
     opacity: 0;
   }

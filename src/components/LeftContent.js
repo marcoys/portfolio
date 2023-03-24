@@ -53,7 +53,7 @@ function LeftContent() {
       
       <div className='left-cont-box'>
         <img src={`${process.env.PUBLIC_URL}/images/mm2.png`} alt="" />
-        <h1 className='txt-brt'>Lee YouSang <br />&#183;</h1>
+        <h1 className='txt-brt'>LEE YOUSANG <br />&#183;</h1>
         <p>Web-Publisher, <br />Front-End Developer</p>
 
         <div>

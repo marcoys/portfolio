@@ -1,0 +1,23 @@
+@use '_app';
+@import '_mixin';
+
+.profile {
+  @include mainContent;
+
+  .container {
+    @include container
+  }
+
+  section {
+    margin-bottom: 50px;
+    h1 {@include title}
+    strong {font-weight: 600;}
+    p {font-size: 1rem; line-height: 22px;}
+    ul > li {line-height: 18px; margin: 15px 0; line-height: 20px;}
+    ol > li {list-style: disc; margin: 5px 0 5px 30px;}
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

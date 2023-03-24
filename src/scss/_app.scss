@@ -1,0 +1,15 @@
+
+$themeColor : #35d47a;
+$themeColorDark : #0a1309;
+
+/* body {background: #111111; position: relative;} */
+
+.start {
+  opacity: 0;
+}
+
+.end {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+

@@ -1,4 +1,4 @@
-@use 'app';
+@use '_app';
 
 .navigation {
   display: flex; 
@@ -12,6 +12,7 @@
     li {
       padding: 10px 20px;
       cursor: pointer;
+      font-size: 1.2rem;
     }
     li.on {
       background-color: app.$themeColor;
