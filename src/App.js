@@ -8,10 +8,11 @@ import Skill from './components/Skill.js';
 import Projects from './components/Projects.js';
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import $ from 'jquery';
 
 function App() {
-  const [ leftWidth, setLeftWidth ] = useState('0');
-  const [ naviWidth, setNaviWidth ] = useState('0');
+  const [ leftWidth, setLeftWidth ] = useState(0);
+  const [ naviWidth, setNaviWidth ] = useState(0);
   const [ fade, setFade ] = useState('');
 
   useEffect(() => {
@@ -19,13 +20,15 @@ function App() {
     return () => {
       setFade('');
     }
-  }, [])
+  }, []);
   
-  
-  window.onload = function() {
+// 사파리에서 onload 작동 안함..
+  $(document).ready(function () {
     setLeftWidth(document.querySelector('.left-content').clientWidth);
-    setNaviWidth(document.querySelector('.navigation').clientWidth);
-  }
+      setNaviWidth(document.querySelector('.navigation').clientWidth);
+      console.log('왼쪽' + document.querySelector('.left-content').clientWidth);
+      console.log('네비' + document.querySelector('.navigation').clientWidth)
+  })
 
   useEffect(() => {
     window.onresize = function(e) {
@@ -44,7 +47,7 @@ function App() {
       <Navigation leftWidth={leftWidth} />
       
       <Routes>
-        <Route path="/" element={<Profile leftWidth={leftWidth} naviWidth={naviWidth} />} />
+        <Route path="/portfolio" element={<Profile leftWidth={leftWidth} naviWidth={naviWidth} />} />
         <Route path="/skill" element={<Skill leftWidth={leftWidth} naviWidth={naviWidth} />} /> 
         <Route path="/projects" element={<Projects leftWidth={leftWidth} naviWidth={naviWidth} />} /> 
         <Route /> 

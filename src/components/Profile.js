@@ -29,7 +29,7 @@ function Profile({ leftWidth, naviWidth }) {
           <h1>CAREER</h1>
           <ul>
             <li>
-              ■ 2020.01.02 ~ 2022.05.31<br /><strong clas>(주)누리웹</strong>&ensp;[웹 에이전시] : 웹 퍼블리셔 근무 (대리)
+              ■ 2020.01.02 ~ 2022.05.31<br /><strong>(주)누리웹</strong>&ensp;[웹 에이전시] : 웹 퍼블리셔 근무 (대리)
               <ol>
                 <li>200여개 고객사 홈페이지 유지보수</li>
                 <li>홈페이지 제작, 리뉴얼 프로젝트 진행</li>

@@ -5,14 +5,37 @@
   @include mainContent;
 
   .container {
-    @include container
-  }
+    @include container;
 
-  section {
-    margin-bottom: 50px;
-    h1 {@include title}
-    strong {font-weight: 600;}
-    p {font-size: 1rem; line-height: 22px;}
+    > div {
+      margin: 15px 0;
+      display: flex;
+      .gauge-wrap {
+        display: flex; 
+        flex-direction: 
+        column; 
+        width: 100%;
+        margin-left: 20px;
+        h5 {font-size: 1.3rem;}
+      }
+      .gauge-box {
+        width: 100%; 
+        height: 40px; 
+        border: 1px solid app.$themeColor;
+        padding: 5px;
+        box-sizing: border-box;
+        .gauge {
+          background-color: app.$themeColor;
+          height: 28px;
+          animation: gauge 2s ease-out;
+          animation-delay: 0.7s;
+        }
+      }
+    }
   }
+}
 
+@keyframes gauge {
+  0% {width: 0%;}
+  100% {width: 100%;}
 }
