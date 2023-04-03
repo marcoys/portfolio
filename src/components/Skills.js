@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import '../scss/skill.scss'
+import '../scss/skills.scss'
 
 function Profile({ leftWidth, naviWidth }) {
   const [ fade, setFade ] = useState('');

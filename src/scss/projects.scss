@@ -1,7 +1,11 @@
 @use '_app';
+@import '_mixin';
 
-// .main-content {
-//   display: flex; 
-//   flex-direction: row; 
-//   padding-left: 50px;
-// }
+.projects {
+  @include mainContent;
+
+  .container {
+    @include container;
+    h1 {@include title}
+  }
+}

@@ -4,7 +4,7 @@ import './scss/app.scss';
 import LeftContent from './components/LeftContent';
 import Profile from './components/Profile';
 import Navigation from './components/Navigation';
-import Skill from './components/Skill.js';
+import Skills from './components/Skills.js';
 import Projects from './components/Projects.js';
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
@@ -48,7 +48,7 @@ function App() {
       
       <Routes>
         <Route path="/portfolio" element={<Profile leftWidth={leftWidth} naviWidth={naviWidth} />} />
-        <Route path="/skill" element={<Skill leftWidth={leftWidth} naviWidth={naviWidth} />} /> 
+        <Route path="/skills" element={<Skills leftWidth={leftWidth} naviWidth={naviWidth} />} /> 
         <Route path="/projects" element={<Projects leftWidth={leftWidth} naviWidth={naviWidth} />} /> 
         <Route /> 
       </Routes>
