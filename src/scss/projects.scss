@@ -3,9 +3,94 @@
 
 .projects {
   @include mainContent;
+  box-sizing: border-box;
 
   .container {
     @include container;
-    h1 {@include title}
+    height: 90vh;
+
+    h1 {
+      @include title
+    }
+    .slide-wrap {
+      height: 93%;
+      overflow-y: scroll;
+    }
+    .slide-wrap::-webkit-scrollbar {
+      width: 13px;  /* 스크롤바의 너비 */
+      box-shadow: none;
+    }
+    
+    .slide-wrap::-webkit-scrollbar-thumb {
+        height: 30%; 
+        background: app.$themeColor; 
+        box-shadow: 0 0 10px rgba(36, 255, 102, 0.5);
+    }
+    
+    .slide-wrap::-webkit-scrollbar-track {
+        background: rgba(33, 122, 244, .1);
+    }
+    .slide-content {
+      margin-bottom: 30px;
+      width: 98%;
+      border: 1px solid app.$themeColor;
+      padding: 2%;
+      box-sizing: border-box;
+      h3 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+      }
+      .slide-contbox {
+        display: flex;
+        flex-direction: row;
+      }
+      .img-box {
+        width: 50%;
+        img {
+          width: 100%;
+          height: auto;
+          max-height: 260px;
+        }
+      }
+      .txt-box {
+        margin-left: 3%;
+        p {
+          margin: 5px 0;
+          a {
+            color: app.$themeColor;
+          }
+        }
+        .comment {
+          margin-top: 20px;
+        }
+      }
+      &:last-of-type {
+      margin-bottom: 0;
+    }
+    }
+  }
+
+
+  
+}
+
+@media screen and (max-width: 1000px) {
+  .projects {
+    @include content-response;
+    padding-left: 0 !important;
+    .container {
+      @include mob-container;
+      .slide-content {
+        padding: 5%;
+        .img-box {
+          width: 100%;
+        }
+        .slide-contbox {
+          flex-direction: column;
+        }
+      }
+    }
   }
 }
+
+:root {--swiper-theme-color: #35d47a !important}

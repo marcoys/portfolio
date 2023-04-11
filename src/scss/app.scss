@@ -24,7 +24,7 @@
 body {position: relative; color: app.$themeColor; background: linear-gradient(#061a0e 10%, app.$themeColorDark 10%);
   background-size: 100% 10px; font-family:  'NeoDunggeunmoPro-Regular'; }
 .App {display: flex; position: relative;}
-.wave-wrap {position: absolute; width: 100vw; height: 100%;  overflow-y: hidden; z-index: 0;}
+.wave-wrap {position: absolute; width: 100%; height: 100%;  overflow-y: hidden; z-index: 0;}
 .wave {position: absolute; top: -50%; width: 100%; height: 200px; background-image: linear-gradient(transparent, #0a2616); animation-name: waveFrame; animation-delay: 10s; animation-duration: 20s; animation-iteration-count: infinite; animation-direction: forward; animation-timing-function: linear; }
 
 .txt-brt {filter: drop-shadow(0 0 2px rgba(36, 255, 102, 0.4)) drop-shadow(0 0 5px rgba(36, 255, 102, 0.4)) drop-shadow(0 0 15px rgba(36, 255, 102, 0.4));}
@@ -41,7 +41,11 @@ body {position: relative; color: app.$themeColor; background: linear-gradient(#0
   }
 }
 
-
+@media screen and (max-width: 1000px) {
+  .App {
+    display: block;
+  }
+}
 
 
 

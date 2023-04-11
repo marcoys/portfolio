@@ -74,3 +74,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### npm install @reduxjs/toolkit react-redux
 ### npm install sass
 ### npm i react-router-dom@6
+### npm i react-slick
+### npm i slick-carousel
+### npm i swiper

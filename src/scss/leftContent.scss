@@ -1,7 +1,7 @@
 @use '_app';
 
 .left-content {
-  z-index: 1;
+  z-index: 3;
   position: fixed;
   height: 100vh; 
   text-align: center;
@@ -62,4 +62,20 @@
     transition: all 0.3s;
     opacity: 0;
   }
+}
+
+@media screen and (max-width: 1000px) {
+  .left-content {
+    display: block;
+     width: 100%; 
+     height: auto; 
+     position: relative;
+     box-sizing: border-box;
+     border-right: none; 
+      box-shadow: none;
+     .left-cont-box {
+      img {margin: 20px 0;}
+      div input {margin: 20px 0;}
+     }
+    }
 }

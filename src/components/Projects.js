@@ -1,5 +1,8 @@
-import { useEffect, useState } from 'react'
-import '../scss/projects.scss'
+import React, { useEffect, useState } from 'react'
+import '../scss/projects.scss';
+import ImgSlide from './ImgSlide';
+import SkillSlide from './skillSlide'
+import projectsData from '../projects.json';
 
 function Profile({ leftWidth, naviWidth }) {
   const [ fade, setFade ] = useState('');
@@ -14,31 +17,36 @@ function Profile({ leftWidth, naviWidth }) {
   
 
   return (
-    <div className={'projects start ' + fade}  style={{ marginLeft: (leftWidth) + (naviWidth)}}>
+    <div className={'projects start ' + fade}  style={{ paddingLeft: (leftWidth) + (naviWidth)}}>
       <div className='container'>
         <h1>프로젝트</h1>
         <div className='slide-wrap'>
           <div className='slide-box'>
-            <div className='slide-content'>
-              <h3>누리웹 PDS 게시판 리뉴얼</h3>
-              <div className='slide-contbox'>
-                <div className='img-box'>
-                  <img src={`${process.env.PUBLIC_URL}/images/nuriweb_01.gif`} alt="" width={'100%'} />
-                </div>
-                <div className='txt-box'>
-                  <p>주소:</p>
-                  <p>작업기간: 2020.1.10 ~ 2020.1.20</p>
-                  <p>퍼블리싱 100% 참여</p>
-                  <br />
-                  <div className='using-skill'>
-                    <img src={`${process.env.PUBLIC_URL}/images/html.png`} />
-                    <img src={`${process.env.PUBLIC_URL}/images/css3.png`} />
-                    <img src={`${process.env.PUBLIC_URL}/images/javascript.png`} />
-                    <img src={`${process.env.PUBLIC_URL}/images/jquery.png`} />
-                  </div>
-                </div>
-              </div>
-            </div>
+              {
+                [...projectsData].reverse().map((item, index) => {
+                  return (
+                    <React.Fragment key={index}>
+                      <div className='slide-content'>
+                        <h3>▶ {item.name}</h3>
+                        <div className='slide-contbox'>
+                          <div className='img-box'>
+                            <ImgSlide imageTitle={item.image} />
+                          </div>
+                          <div className='txt-box'>
+                            <p>주소 : {item.url !== '-' ? <a href={item.url} target='_blank' rel='noreferrer'>{item.url}</a> : '-' } </p>
+                            <p>작업기간 : {item.period}</p>
+                            <p className='comment'>{item.comment}</p>
+                            <br />
+                            <div className='using-skill'>
+                              <SkillSlide skillTitle={item.skill} />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </React.Fragment>
+                  )
+                })
+              }
           </div>
         </div>
       </div>

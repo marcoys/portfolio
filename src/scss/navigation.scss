@@ -1,4 +1,5 @@
 @use '_app';
+@import '_mixin';
 
 .navigation {
   display: flex; 
@@ -8,6 +9,7 @@
   position: fixed; 
   border-right: 1px solid app.$themeColor; 
   box-shadow: 0 0 8px rgba(36, 255, 102, 0.5);
+  z-index: 2;
   ul {
     li {
       padding: 10px 20px;
@@ -17,6 +19,20 @@
     li.on {
       background-color: app.$themeColor;
       color: app.$themeColorDark;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navigation {
+    @include content-response;
+    border-right: none;
+    ul {
+      display: flex;
+      li {
+        width: calc(100%/3);
+        text-align: center;
+      }
     }
   }
 }

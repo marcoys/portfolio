@@ -21,3 +21,18 @@
     }
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .profile {
+    @include content-response;
+    .container {
+      @include mob-container;
+      section h1 {
+        font-size: 1.2rem;
+        strong {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}

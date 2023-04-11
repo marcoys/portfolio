@@ -22,6 +22,18 @@
   font-size: 1.5rem; margin-bottom: 10px; border-bottom: 1px solid app.$themeColor;
 }
 
+@mixin content-response {
+  display: block; width: 100%; height: auto; margin-left: 0 !important; position: relative;
+  @content;
+}
+
+@mixin mob-container {
+  animation: none;
+  width: 100%;
+  padding: 5%;
+  @content;
+}
+
 @keyframes noise {
   0% {
     transform: matrix3d(1, 0, 6, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, -1000, 0, 1) scaleY(0.1);
