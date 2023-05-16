@@ -10,7 +10,7 @@ function Profile({ leftWidth, naviWidth }) {
     setFade('end');
 
     setTimeout(() => {
-      setPer([ 80, 80, 70, 40, 70, 70 ])
+      setPer([ 90, 80, 70, 70, 70, 80, 40 ])
     }, 700);
   
     return () => {
@@ -40,23 +40,24 @@ function Profile({ leftWidth, naviWidth }) {
           </div>
         </div>
         <div>
-          <img src={`${process.env.PUBLIC_URL}/images/javascript.png`} alt="" />
+          <img src={`${process.env.PUBLIC_URL}/images/sass.png`} alt="" />
           <div className='gauge-wrap'>
-            <h5>Java Script</h5>
+            <h5>SASS</h5>
             <div className='gauge-box' style={{ paddingRight: `${100 - per[2]}%` }}>
               <div className='gauge'></div>
             </div>
           </div>
         </div>
         <div>
-          <img src={`${process.env.PUBLIC_URL}/images/nodejs.png`} alt="" />
+          <img src={`${process.env.PUBLIC_URL}/images/javascript.png`} alt="" />
           <div className='gauge-wrap'>
-            <h5>Node.js</h5>
+            <h5>Java Script</h5>
             <div className='gauge-box' style={{ paddingRight: `${100 - per[3]}%` }}>
               <div className='gauge'></div>
             </div>
           </div>
         </div>
+        
         <div>
           <img src={`${process.env.PUBLIC_URL}/images/react.png`} alt="" />
           <div className='gauge-wrap'>
@@ -72,6 +73,24 @@ function Profile({ leftWidth, naviWidth }) {
             <h5>Jquery</h5>
             <div className='gauge-box' style={{ paddingRight: `${100 - per[5]}%` }}>
               <div className='gauge'></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src={`${process.env.PUBLIC_URL}/images/nodejs.png`} alt="" />
+          <div className='gauge-wrap'>
+            <h5>Node.js</h5>
+            <div className='gauge-box' style={{ paddingRight: `${100 - per[6]}%` }}>
+              <div className='gauge'></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src={`${process.env.PUBLIC_URL}/images/nextjs.png`} alt="" />
+          <div className='gauge-wrap'>
+            <h5>NEXT.js</h5>
+            <div className='gauge-box'>
+              <h5 style={{ lineHeight: '26px', textAlign: 'center'}}>준비중..</h5>
             </div>
           </div>
         </div>
