@@ -53,13 +53,17 @@ function LeftContent() {
       
       <div className='left-cont-box'>
         <img src={`${process.env.PUBLIC_URL}/images/mm2.png`} alt="" />
-        <h1 className='txt-brt'>LEE YOUSANG <br />&#183;</h1>
-        <p>Web-Publisher<br />Front-End Developer</p>
-
         <div>
-          <input type="text" value='ysmarco12@gmail.com' readOnly className='email' />
-          <AiFillCopy className='btn-copy' onClick={fncClickBoardApi} />
+          <h1 className='txt-brt'>LEE YOUSANG <br />&#183;</h1>
+          <p>Web-Publisher<br />Front-End Developer</p>
+
+          <div>
+            <a href="https://github.com/marcoys" target={'_blank'}>https://github.com/marcoys</a>
+            <input type="text" value='ysmarco12@gmail.com' readOnly className='email' />
+            <AiFillCopy className='btn-copy' onClick={fncClickBoardApi} />
+          </div>
         </div>
+        
       </div>    
     </div>
   )

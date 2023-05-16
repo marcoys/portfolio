@@ -17,7 +17,7 @@
       overflow-y: scroll;
     }
     .slide-wrap::-webkit-scrollbar {
-      width: 13px;  /* 스크롤바의 너비 */
+      width: 10px;  /* 스크롤바의 너비 */
       box-shadow: none;
     }
     
@@ -39,6 +39,12 @@
       h3 {
         font-size: 1.5rem;
         margin-bottom: 15px;
+        display: flex;
+        flex-direction: row;
+        font-weight: 600;
+        > div:nth-child(2) {
+          margin-left: 8px;
+        }
       }
       .slide-contbox {
         display: flex;
@@ -62,6 +68,9 @@
         }
         .comment {
           margin-top: 20px;
+        }
+        .using-skill {
+          img {margin: 5px;}
         }
       }
       &:last-of-type {
@@ -90,6 +99,13 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .slide-wrap::-webkit-scrollbar {
+    width: 5px;  /* 스크롤바의 너비 */
+    box-shadow: none;
   }
 }
 

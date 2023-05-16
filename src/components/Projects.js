@@ -27,7 +27,7 @@ function Profile({ leftWidth, naviWidth }) {
                   return (
                     <React.Fragment key={index}>
                       <div className='slide-content'>
-                        <h3>▶ {item.name}</h3>
+                        <h3><div>▶</div><div>{item.name}</div></h3>
                         <div className='slide-contbox'>
                           <div className='img-box'>
                             <ImgSlide imageTitle={item.image} />

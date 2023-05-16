@@ -86,5 +86,29 @@
     "comment": "퍼블리싱 100% 참여 ( 반응형 ) - 메인페이지",
     "skill": [ "html", "css3", "jquery", "javascript"],
     "image": [ "jeil_01" ]
+  },
+  {
+    "name": "My Classic List [ 개인 프로젝트 ]",
+    "url" : "http://myclassiclist-env.eba-gczrcczm.ap-northeast-2.elasticbeanstalk.com/",
+    "period": "2023.3.1 ~ 2023.4.21",
+    "comment": "React, Node.js, MongoDB를 이용해 관람 공연 정보 등록 페이지 제작, AWS beanstalk를 통한 배포",
+    "skill": [ "react", "javascript", "nodejs", "html", "css3"],
+    "image": [ "jeil_01" ]
+  },
+  {
+    "name": "Portfolio 홈페이지 [ 개인 프로젝트 ]",
+    "url" : "https://marcoys.github.io/portfolio/",
+    "period": "2023.3.20 ~ ",
+    "comment": "React, SASS를 이용한 개인 포트폴리오 홈페이지 제작",
+    "skill": [ "react", "javascript", "sass", "html"],
+    "image": [ "jeil_01" ]
+  },
+  {
+    "name": "Matchday [ 개인 프로젝트 ]",
+    "url" : "https://marcoys.github.io/portfolio/",
+    "period": "2023.4.1 ~ ",
+    "comment": "React, OPENAPI, Redux toolkit 을 이용한 축구데이터 홈페이지 제작",
+    "skill": [ "react", "javascript", "sass", "html"],
+    "image": [ "jeil_01" ]
   }
 ]

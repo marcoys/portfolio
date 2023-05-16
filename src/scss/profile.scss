@@ -11,9 +11,20 @@
   section {
     margin-bottom: 50px;
     h1 {@include title}
-    strong {font-weight: 600;}
+    h5 {
+      padding: 5px 0;
+      line-height: 23px;
+      strong {font-weight: 600; font-size: 1.3rem; }
+    }
     p {font-size: 1rem; line-height: 22px;}
-    ul > li {line-height: 18px; margin: 15px 0; line-height: 20px;}
+    ul > li {
+      line-height: 18px; 
+      margin: 15px 0; 
+      line-height: 20px;
+      p {
+        font-size: 1.2rem;
+      }
+    }
     ol > li {list-style: disc; margin: 5px 0 5px 30px;}
 
     &:last-of-type {
