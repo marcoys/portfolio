@@ -26,15 +26,15 @@ function App() {
   $(document).ready(function () {
     setLeftWidth(document.querySelector('.left-content').clientWidth);
       setNaviWidth(document.querySelector('.navigation').clientWidth);
-      console.log('왼쪽' + document.querySelector('.left-content').clientWidth);
-      console.log('네비' + document.querySelector('.navigation').clientWidth)
+      // console.log('왼쪽' + document.querySelector('.left-content').clientWidth);
+      // console.log('네비' + document.querySelector('.navigation').clientWidth)
   })
 
   useEffect(() => {
     window.onresize = function(e) {
       setLeftWidth(document.querySelector('.left-content').clientWidth);
       setNaviWidth(document.querySelector('.navigation').clientWidth);
-      console.log(leftWidth);
+      // console.log(leftWidth);
     }
     return () => {
     }

@@ -59,15 +59,20 @@
         }
       }
       .txt-box {
-        margin-left: 3%;
-        p {
+        padding-left: 3%;
+        box-sizing: border-box;
+        width: 47%;
+        div {
           margin: 5px 0;
           a {
+            width: 85%;
             color: app.$themeColor;
+            word-break: break-all;
           }
         }
         .comment {
           margin-top: 20px;
+          word-break: keep-all;
         }
         .using-skill {
           img {margin: 5px;}
@@ -94,6 +99,10 @@
         .img-box {
           width: 100%;
         }
+        .txt-box {
+          padding-left: 0;
+          width: 100%;
+        }
         .slide-contbox {
           flex-direction: column;
         }
@@ -106,6 +115,16 @@
   .slide-wrap::-webkit-scrollbar {
     width: 5px;  /* 스크롤바의 너비 */
     box-shadow: none;
+  }
+
+  .using-skill img {
+    margin: 0 !important;
+    margin-right: calc(5%/3) !important;
+    margin-bottom: 10px !important;
+    width: calc(95%/4);
+  }
+  .using-skill img:nth-child(4n) {
+    margin-right: 0 !important;
   }
 }
 

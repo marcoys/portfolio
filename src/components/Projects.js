@@ -33,7 +33,7 @@ function Profile({ leftWidth, naviWidth }) {
                             <ImgSlide imageTitle={item.image} />
                           </div>
                           <div className='txt-box'>
-                            <p>주소 : {item.url !== '-' ? <a href={item.url} target='_blank' rel='noreferrer'>{item.url}</a> : '-' } </p>
+                            <div style={{ display: 'flex', flexDirection: 'row'}}><p style={{ width: '50px'}}>주소 : </p>{item.url !== '-' ? <a href={item.url} target='_blank' rel='noreferrer'>{item.url}</a> : '-' } </div>
                             <p>작업기간 : {item.period}</p>
                             <p className='comment'>{item.comment}</p>
                             <br />

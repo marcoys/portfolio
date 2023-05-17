@@ -43,10 +43,6 @@ function LeftContent() {
       }); 
   }
 
-  
-
-
-
   return (
     <div className='left-content'>
       <div className="copy-done">복사완료</div>
