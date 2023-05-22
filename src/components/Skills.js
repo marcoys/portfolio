@@ -21,6 +21,7 @@ function Profile({ leftWidth, naviWidth }) {
   return (
     <div className={'skill start ' + fade}  style={{ marginLeft: (leftWidth) + (naviWidth)}}>
       <div className='container'>
+        <h1>Skills</h1>
         <div>
           <img src={`${process.env.PUBLIC_URL}/images/html.png`} alt="" />
           <div className='gauge-wrap'>

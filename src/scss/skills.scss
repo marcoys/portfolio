@@ -7,6 +7,10 @@
   .container {
     @include container;
 
+    h1 {
+      @include title
+    }
+
     > div {
       margin: 15px 0;
       display: flex;
