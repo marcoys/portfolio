@@ -106,7 +106,7 @@
   {
     "name": "Matchday [ 개인 프로젝트 ]",
     "url" : "https://marcoys.github.io/matchday/",
-    "period": "2023.4.1 ~ ",
+    "period": "2023.4.1 ~ 2023.4.26",
     "comment": "React, OPENAPI, Redux toolkit 을 이용한 축구데이터 홈페이지 제작",
     "skill": [ "react", "javascript", "sass", "html"],
     "image": [ "matchday_01", "matchday_02", "matchday_03" ]
