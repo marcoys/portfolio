@@ -91,7 +91,7 @@
     "name": "My Classic List [ 개인 프로젝트 ]",
     "url" : "http://myclassiclist-env.eba-gczrcczm.ap-northeast-2.elasticbeanstalk.com/",
     "period": "2023.3.1 ~ 2023.4.21",
-    "comment": "React, Node.js, MongoDB를 이용해 관람 공연 정보 등록 페이지 제작, AWS beanstalk를 통한 배포, 관리자 로그인 시 등록/수정/삭제 가능, [ ]",
+    "comment": "React, Node.js, MongoDB를 이용해 관람 공연 정보 등록 페이지 제작, AWS beanstalk를 통한 배포, 관리자 로그인 시 등록/수정/삭제 가능, [ id: test, pw : test ]",
     "skill": [ "react", "javascript", "nodejs", "html", "css3"],
     "image": [ "mcl_01", "mcl_02", "mcl_03", "mcl_04" ]
   },
