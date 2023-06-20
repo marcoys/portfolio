@@ -86,7 +86,7 @@ function Profile({ leftWidth, naviWidth }) {
             </div>
           </div>
         </div>
-        <div>
+        {/* <div>
           <img src={`${process.env.PUBLIC_URL}/images/nextjs.png`} alt="" />
           <div className='gauge-wrap'>
             <h5>NEXT.js</h5>
@@ -94,7 +94,7 @@ function Profile({ leftWidth, naviWidth }) {
               <h5 style={{ lineHeight: '26px', textAlign: 'center'}}>준비중..</h5>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )
